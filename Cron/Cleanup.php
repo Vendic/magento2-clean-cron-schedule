@@ -33,7 +33,7 @@ class Cleanup
     public function execute()
     {
         $connection = $this->connection->getConnection();
-        $sql = "DELETE FROM cron_schedule WHERE  scheduled_at < Date_sub(Now(), interval 1 hour);";
+        $sql = "DELETE FROM cron_schedule WHERE  scheduled_at < Date_sub(Now(), interval 24 hour);";
 
         try {
             $connection->query($sql);

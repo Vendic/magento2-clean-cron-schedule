@@ -3,7 +3,7 @@
 Magento 2.2 has issues with giant `cron_schedule` tables. The cron job running time will increase when the table gets bigger, causing heavy CPU usage. 
 
 ### Identifing the problem
-In one of our stores the `cron_schedule` table exeeded 100.000 rows. To identify the problem run the following SQL query:
+In one of our stores the `cron_schedule` table exeeded 1.000.000 rows. To identify the problem run the following SQL query:
 ```sql
 SELECT count(*) FROM `cron_schedule`
 ```
@@ -11,7 +11,7 @@ SELECT count(*) FROM `cron_schedule`
 ### Solving the problem
 Remove the old rows in `cron schedule`: 
 ```sql
-DELETE FROM cron_schedule WHERE  scheduled_at < Date_sub(Now(), interval 1 hour);
+DELETE FROM cron_schedule WHERE  scheduled_at < Date_sub(Now(), interval 24 hour);
 ```
 [Source](https://magento.stackexchange.com/a/208597/28803)
 
