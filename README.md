@@ -23,3 +23,7 @@ This module will execute the cleanup query once a day.
 ### Related issues
 - [Issue 11002 on Gitub](https://github.com/magento/magento2/issues/11002)
 - [Magento stackexchange](https://magento.stackexchange.com/questions/208592/magento-2-cronjob-bug-mysql-is-always-running-at-30-usage-and-many-php-proces/208597#208597)
+
+
+### About Vendic
+[Vendic](https://www.vendic.nl "Vendic Homepage") develops technically challenging e-commerce websites using Magento 2, as well as innovative headless PWA shops. Feel free to check out our projects on our website.
